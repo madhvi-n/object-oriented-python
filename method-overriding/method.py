@@ -19,7 +19,7 @@ class Point(object):
 
 	def length(self):
 		import math
-		return math.sqrt(self.x ** 2, self.y ** 2)
+		return math.sqrt(self.x ** 2 + self.y ** 2)
 
 	def __gt__(self, p):
 		return self.length() > p.length()
@@ -61,7 +61,11 @@ def main():
 	p7 = p2 - p4
 	print(p7)
 
-	print(dir(p1))
+	print(p1.__eq__(p2))
+	print(p1.__gt__(p3))
+	print(p1.__ne__(p5))
+
+	# print(dir(p1))
 
 
 if __name__ == '__main__':
